@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import axios from 'axios';
+import Register from './components/Regiser';
 
 function App() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  
+  // axios({
+  //   method: 'post',
+  //   url: 'https://ttmg-backend.herokuapp.com/api/auth/staffLogin',
+  //   data: {
+  //     "email": "abhasing@gmail.com",
+  //     "password": "abharani",
+  //     "name": "Abha Singh",
+  //     "mobile": "0123456789"
+  //   }
+  // });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Register />
     </div>
   );
 }
