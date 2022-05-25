@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.form-wrapper {
+  width: 25%;
+  margin: auto;
+  border: 1px black solid;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.form-wrapper {
+  width: 25%;
+  margin: auto;
+  margin-top: 10rem;
+  border: 1px solid;
+  padding: 2rem;
+  background-color: aliceblue;
+}
+
+input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+body {
+background-color: black;
+}

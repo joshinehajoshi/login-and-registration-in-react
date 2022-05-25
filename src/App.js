@@ -1,29 +1,21 @@
-import React, {useState} from 'react';
-import './App.css';
-import axios from 'axios';
+import React from 'react';
 import Register from './components/Regiser';
+import Login from './components/Login';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 
 function App() {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
   
-  // axios({
-  //   method: 'post',
-  //   url: 'https://ttmg-backend.herokuapp.com/api/auth/staffLogin',
-  //   data: {
-  //     "email": "abhasing@gmail.com",
-  //     "password": "abharani",
-  //     "name": "Abha Singh",
-  //     "mobile": "0123456789"
-  //   }
-  // });
   return (
-    <div className="App">
-      <Register />
-    </div>
-  );
+    <>
+    <Router>
+     <Routes>
+        <Route path="/" element={ <Register/> } />
+        <Route path="login" element={ <Login/> } />
+      </Routes>
+    </Router>
+    </>
+  )
 }
 
-export default App;
+export default App
